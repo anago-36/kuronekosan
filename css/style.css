@@ -4,15 +4,18 @@
   position: relative;
 }
 
-.cat-heads {
+.cat-head {
   position: relative;
   width: 400px;
+  height: 300px;
+  background: #000;
+  border-radius: 60% 60% 50% 50%;
 }
 
 .cat-ears {
   width: 100%;
   position: absolute;
-  top: 0;
+  top: -80px;
   left: 0;
   display: flex;
   justify-content: space-between;
@@ -32,15 +35,6 @@
 
 .cat-ear:last-child {
   transform: rotate(20deg);
-}
-
-.cat-face {
-  width: 400px;
-  height: 300px;
-  background: #000;
-  border-radius: 60% 60% 50% 50%;
-  position: absolute;
-  top: 85px;
 }
 
 .cat-eyes {
@@ -88,7 +82,7 @@
   background: #000;
   border-radius: 100% 100% 50% 50%;
   position: absolute;
-  top: 350px;
+  top: 250px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -104,6 +98,21 @@
   position: absolute;
   bottom: 80px;
   left: 250px;
-  transform: rotate(340deg);
   border-radius: 100vh;
+  transform-origin:left top;
+  animation: tail-furifuri 4s linear infinite;
+}
+
+@keyframes tail-furifuri{
+  0%{
+    transform: rotate(320deg);
+  }
+
+  50%{
+    transform: rotate(350deg);
+  }
+
+  100%{
+    transform: rotate(320deg);
+  }
 }
